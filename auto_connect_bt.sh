@@ -2,7 +2,7 @@
 
 # MAC-адреса устройств
 DEVICE1="6F:39:31:CB:8D:09"
-DEVICE2="40:58:99:47:45:4B"
+DEVICE2="A4:05:6E:19:15:CE"
 
 # Включаем Bluetooth
 bluetoothctl power on

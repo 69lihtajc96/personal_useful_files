@@ -104,6 +104,7 @@ alias bettercap='cd ~/Programs/bettercap && s go run main.go -eval "ui on"'
 alias game='cd ~/Games'
 
 
+
 alias themes='cd /home/doshlk/.config/hyde/themes/'
 
 alias sn='syncthing'
@@ -123,7 +124,7 @@ alias p='~/.scripts/pomo.sh'
 alias down='cd ~/Downloads'
 
 alias akill='~/.scripts/akill.sh'
-
+alias afind='~/.scripts/afind.sh'
 
 alias waydefwaydef='cd ~/.config/waybar/old_style_hyde/ && s ./set.sh'
 alias waywin='cd ~/.config/waybar/win10-style-waybar/ && s ./set.sh'
@@ -159,8 +160,10 @@ alias asciiwebcam='python ~/.scripts/webcam_ascii.py'
 alias menu='./.scripts/menu.sh'
 alias ed='micro'
 alias sed='sudo micro'
+
 alias stabledif=' cd ~/Programs/stable-diffusion-webui && python3.10 webui.py --allow-code --skip-torch-cuda-test --skip-python-version-check --no-progressbar-hiding --xformers --no-half-vae --api --api-auth idk:cdf'
 alias mystablebedif='  cd ~/Programs/stable-diffusion-webui && python3.10 my_webui.py --allow-code --skip-torch-cuda-test --skip-python-version-check --no-progressbar-hiding --xformers --no-half-vae --api --api-auth idk:cdf'
+
 alias paket='pacseek'
 alias mamunt='sudo mount --bind /run/media/doshlk/d770daa7-8b59-45d6-91d2-5d13fe540186/server ~/server && sudo mount --bind /run/media/doshlk/d770daa7-8b59-45d6-91d2-5d13fe540186/myprojects ~/myprojects'
 alias mamuntp='sudo mount --bind /run/media/doshlk/d770daa7-8b59-45d6-91d2-5d13fe540186/Programs ~/Programs'
@@ -170,6 +173,8 @@ alias etp='sudo -E ettercap -G'
 alias minecraft_server='java -Xmx14G -Xms2G -jar ~/pizda_server/server.jar nogui'
 
 
+
+alias kbt='./.scripts/kbt.sh'
 
 alias tablica='./.scripts/type_csv.sh'
 
@@ -286,3 +291,7 @@ export PATH=$PATH:/home/doshlk/.local/bin
 : undercover && new_line_before_prompt=no
 
 
+
+fpath+=~/.zfunc; autoload -Uz compinit; compinit
+
+zstyle ':completion:*' menu select

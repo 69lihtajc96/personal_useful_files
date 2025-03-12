@@ -2,7 +2,7 @@ typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 
 
 # Путь к установке oh-my-zsh
-ZSH=/usr/share/oh-my-zsh/
+#ZSH=/usr/share/oh-my-zsh/
 
 # Путь к теме powerlevel10k
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
@@ -92,7 +92,8 @@ alias vc='code' # GUI редактор кода
 alias ob='obsidian' # obsidian
 alias chx='chmod +x ' # Изменение прав
 alias ac='cd && cd .scripts/action && sudo python3 action.py'
-alias vulmap='python3 ~/.scripts/vulmap.py'
+
+alias zerostart='ztcg && ztp && ztsh && zti'
 alias ztcg='sudo zerotier-cli join ebe7fbd445533037' 
 alias ztp='sudo zerotier-cli join 41d49af6c2e82a63'
 alias ztsh='sudo zerotier-cli join b15644912ef73fd5'
@@ -102,12 +103,24 @@ alias olse='sudo systemctl stop ollama.service && ollama serve'
 
 alias bettercap='cd ~/Programs/bettercap && s go run main.go -eval "ui on"'
 alias game='cd ~/Games'
+alias sudofiz='faillock --user $(whoami) --reset'
+alias tshift='xhost +SI:localuser:root && sudo timeshift-gtk'
 
+alias v='sensors | wl-copy'
 
 
 alias themes='cd /home/doshlk/.config/hyde/themes/'
 
 alias sn='syncthing'
+
+
+
+
+alias cmax='~/.scripts/cpu_gpu_mode/max_perf.sh'
+alias cbal='~/.scripts/cpu_gpu_mode/balanced.sh'
+alias cmin='~/.scripts/cpu_gpu_mode/powersave.sh'
+
+
 
 
 alias weather='~/.scripts/weather.sh'
@@ -125,12 +138,6 @@ alias down='cd ~/Downloads'
 
 alias akill='~/.scripts/akill.sh'
 alias afind='~/.scripts/afind.sh'
-
-alias waydefwaydef='cd ~/.config/waybar/old_style_hyde/ && s ./set.sh'
-alias waywin='cd ~/.config/waybar/win10-style-waybar/ && s ./set.sh'
-
-
-alias wi='waydroid app install'
 
 
 # yay 
@@ -172,6 +179,11 @@ alias etp='sudo -E ettercap -G'
 
 alias minecraft_server='java -Xmx14G -Xms2G -jar ~/pizda_server/server.jar nogui'
 
+
+# SSH
+
+alias sp='ssh root@192.168.193.3' 
+alias sr='ssh user@192.168.193.2'
 
 
 alias kbt='./.scripts/kbt.sh'
@@ -217,7 +229,7 @@ alias browser-cli='browsh'
 
 # Алиасы для поиска файлов и директорий
 alias f='find . -name' # Поиск файлов по имени
-alias ff='find . -type f -name' # Поиск файлов по имени
+alias fname='find . -type f -name' # Поиск файлов по имени
 alias fg='find . -type d -name' # Поиск директорий по имени
 alias grep='grep --color=auto' # Показать результаты поиска с цветом
 
